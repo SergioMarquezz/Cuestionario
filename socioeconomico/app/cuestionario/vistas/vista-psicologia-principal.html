@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vistas alumno:::UTEC</title>
+
+    <link rel="icon" href="../../img/logoHalcon.jpg">
+
+    <link rel="stylesheet" href="../../css/bootstrap.css" />
+    <link rel="stylesheet" href="../../css/mdb.css" />
+    <link rel="stylesheet" href="../../icons.css">
+    <link rel="stylesheet" href="../../css/datatables.css">
+    <link rel="stylesheet" href="../../css/confirm-alert.css">
+    <link rel="stylesheet" href="../../css/lobibox.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+<body background="../../img/logo-utec-nuevo.png" onload="noRegresar()">
+
+    <header>
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark cyan darken-3 fixed-top">
+            <a class="navbar-brand" href="#">SISTEMA DE GESTIÓN ESCOLAR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+                aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+                <label class="navbar-toggler-icon"></label>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="icon-user3"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                            <a class="dropdown-item text-uppercase" href="#" id="name-user"></a>
+                            <a class="dropdown-item" href="" id="salir">SALIR</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-psicolaga">
+             
+          <!-- <div class="view overlay">
+                <img src="../../img/logobis.jpg" class="img-fluid" alt="">
+                <a href="#">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div> -->
+            <h1 id="user-bienvenido">Bienvenida Miriam</h1>
+            <p class="lead">Alumnos regulares en la Universidad Técnolgica de Tulancingo que han respondido el cuestionario socioeconomico</p>
+            <hr class="my-4">  
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <button id="button-inicio" class="btn-md btn-default ml-4">Inicio</button>
+                        <button id="button-general" class="btn-md btn-default ml-4">Datos Generales</button>
+                        <button id="button-familiar" class="btn-md btn-default ml-4">Entorno Familiar</button>
+                        <button id="button-trayectoria" class="btn-md btn-default ml-4">Trayectoria Académica</button>
+                        <button id="button-personales" class="btn-md btn-default ml-4">Características personales</button>
+                        <button id="button-academicas" class="btn-md btn-default ml-4"> Decisiones académicas</button>
+                    </ol>
+                </nav>
+            </div>
+            <input type="text" id="secciones">        
+            <p id="alumnos" class="text-center mt-5">Datos De Alumnos</p>
+
+            <div id="table-responsive-alumnos" class="table-responsive container-fluid table-container col-sm-11">
+                <table id="dt-alumnos" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                  <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Matricula</th>
+                        <th>Carrera</th>
+                    </tr>
+                </thead>
+                  <tbody>
+                    
+                  </tbody>
+                  <tfoot>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Matricula</th>
+                    <th>Carrera</th>
+                  </tfoot>
+                </table>
+            </div>
+            
+            <div id="table-responsive-respuestas-general" class="table-responsive container-fluid table-container col-sm-11">
+                <table id="dt-respuestas" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Matricula</th>
+                        <th>Carrera</th>
+                        <th>Opción</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    
+                    
+                    </tbody>
+                    <tfoot>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Matricula</th>
+                    <th>Carrera</th>
+                    <th>Opción</th>
+                    </tfoot>
+                </table>
+            </div>
+            <div id="table-responsive-respuestas-familiar" class="table-responsive container-fluid table-container col-sm-11">
+                <table id="dt-respuestas-familiar" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Matricula</th>
+                        <th>Carrera</th>
+                        <th>Opción</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    
+                    
+                    </tbody>
+                    <tfoot>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Matricula</th>
+                    <th>Carrera</th>
+                    <th>Opción</th>
+                    </tfoot>
+                </table>
+            </div>
+            <div id="table-responsive-respuestas-trayectoria" class="table-responsive container-fluid table-container col-sm-11">
+                <table id="dt-respuestas-trayectoria" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Matricula</th>
+                        <th>Carrera</th>
+                        <th>Opción</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        
+                    
+                    </tbody>
+                    <tfoot>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Matricula</th>
+                    <th>Carrera</th>
+                    <th>Opción</th>
+                    </tfoot>
+                </table>
+            </div>
+            <div id="table-responsive-respuestas-caracteristicas" class="table-responsive container-fluid table-container col-sm-11">
+                <table id="dt-respuestas-caracteristicas" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Matricula</th>
+                        <th>Carrera</th>
+                        <th>Opción</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    
+                    
+                    </tbody>
+                    <tfoot>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Matricula</th>
+                    <th>Carrera</th>
+                    <th>Opción</th>
+                    </tfoot>
+                </table>
+            </div>
+          <!--  <div id="table-responsive-respuestas-academicas" class="table-responsive container-fluid table-container col-sm-11">
+                <table id="dt-respuestas-academicas" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Matricula</th>
+                        <th>Carrera</th>
+                        <th>Opción</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    
+                    
+                    </tbody>
+                    <tfoot>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Matricula</th>
+                    <th>Carrera</th>
+                    <th>Opción</th>
+                    </tfoot>
+                </table>
+            </div>-->
+           <div id="table-responsive-general" class="table-responsive container-fluid table-container col-sm-11">
+               <h3 class="mb-5 text-center" id="respuestas-generales"></h3>
+                <table id="dt-alumnos-datos" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Pregunta</th>
+                        <th>Reactivo</th>
+                        <th>Respuesta</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    
+                    
+                    </tbody>
+                    <tfoot>
+                    <th>Pregunta</th>
+                    <th>Reactivo</th>
+                    <th>Respuesta</th>
+                    </tfoot>
+                </table>
+            </div> 
+            <div id="table-responsive-familiar2" class="table-responsive container-fluid table-container col-sm-11">
+                <h3 class="mb-5 text-center" id="respuestas-familiar"></h3>
+                <table id="dt-alumnos-datos-familiar2" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Pregunta</th>
+                        <th>Respuesta</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    
+                    
+                    </tbody>
+                    <tfoot>
+                    <th>Pregunta</th>
+                    <th>Respuesta</th>
+                    </tfoot>
+                </table>
+            </div>
+
+        <div id="table-responsive-familiar" class="table-responsive container-fluid table-container col-sm-11">
+                <h3 class="mb-5 text-center" id="respuestas-familiar"></h3>
+            <table id="dt-alumnos-datos-familiar" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Pregunta</th>
+                    <th>Reactivo</th>
+                    <th>Respuesta</th>
+                </tr>
+            </thead>
+                <tbody>
+                
+                
+                </tbody>
+                <tfoot>
+                <th>Pregunta</th>
+                <th>Reactivo</th>
+                <th>Respuesta</th>
+                </tfoot>
+            </table>
+        </div>
+        <div id="table-responsive-trayectoria" class="table-responsive container-fluid table-container col-sm-11">
+            <h3 class="mb-5 text-center" id="respuestas-trayectoria"></h3>
+            <table id="dt-alumnos-datos-trayecotria" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Pregunta</th>
+                    <th>Respuesta</th>
+                </tr>
+            </thead>
+                <tbody>
+                
+                
+                </tbody>
+                <tfoot>
+                <th>Pregunta</th>
+                <th>Respuesta</th>
+                </tfoot>
+            </table>
+            <h6 class="mt-4">¿CUÁL FUE SU PROMEDIO FINAL EN EL SEGUNDO AÑO DEL NIVEL MEDIO SUPERIOR?</h6>
+            <label for="" id="promedio-bachiller"></label>
+            <h6 class="mt-4">¿EN QUÉ ENTIDAD ESTUDIA EL NIVEL MEDIO SUPERIOR?</h6>
+            <label for="" id="estado"></label>
+            <h6 class="mt-4" id="cursar-materia">¿CUÁNDO CURSÓ LA ÚLTIMA MATERIA DEL NIVEL MEDIO SUPERIOR?</h6>
+            <label for="" id="materia"></label>
+        </div>
+        <div id="table-responsive-caracteristicas" class="table-responsive container-fluid table-container col-sm-11">
+                <h3 class="mb-5 text-center" id="respuestas-caracteristicas"></h3>
+            <table id="dt-alumnos-datos-caracteristicas" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Pregunta</th>
+                    <th>Reactivo</th>
+                    <th>Respuesta</th>
+                </tr>
+            </thead>
+                <tbody>
+                
+                
+                </tbody>
+                <tfoot>
+                <th>Pregunta</th>
+                <th>Reactivo</th>
+                <th>Respuesta</th>
+                </tfoot>
+            </table>
+        </div>
+         <!--   <div id="table-responsive-personales" class="table-responsive container-fluid table-container col-sm-11">
+                <table id="dt-alumnos-datos-academicas" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Pregunta</th>
+                        <th>Reactivo</th>
+                        <th>Respuesta</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    
+                    
+                    </tbody>
+                    <tfoot>
+                    <th>Pregunta</th>
+                    <th>Reactivo</th>
+                    <th>Respuesta</th>
+                    </tfoot>
+                </table>
+            </div>  -->
+        </div>
+        
+    </div>
+
+    
+</body>
+
+    <!--FOOTER-->
+<footer class="page-footer blue-grey darken-1 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mt-4">
+            <h5 class="white-text">Departamento de Sistemas y Soporte Técnico</h5>
+                <p class="grey-text text-light-4">Sistema de Gestion Escolar, Utec 2019</p>
+                    <p class="grey-text text-light-4">Email: sergiomarquez@utectulancingo.edu.mx</p>
+            </div>
+            <div class="col-md-6 mt-4">  
+                <b>Para un mejor funcionamiento del sitio <br>utiliza alguno de los siguientes navegadores.</b>
+                <div class="row">
+                    <div class="browsers container">
+                        <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="../../img/chrom.ico" alt="chrom" class="icon" title="Google Chrom"></a>
+                        <a href="https://www.mozilla.org/es-MX/firefox/new/" target="_blank"><img src="../../img/mozilla.ico" alt="mozilla" class="icon" title="Firefox Mozilla"></a>
+                        <a href="https://www.microsoft.com/es-mx/windows/microsoft-edge" target="_blank"><img src="../../img/edge.png" alt="edge" class="icon" title="Edge"></a>
+                    </div> 
+                </div>    
+            </div>
+        </div>
+    </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-lg-6">
+                    <p>©Copyright 2019 
+                    </div>
+                    <div class="col-lg-6">
+                    <label class="right">Realizado por: <b class="text-white">Sergio Alberto Marquez Moreno</b></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script type="text/javascript" src="../../js/popper.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/datatables.js"></script>
+<script type="text/javascript" src="../../js/mdb.min.js"></script>
+<script type="text/javascript" src="../../js/confirm-alert.js"></script>
+<script type="text/javascript" src="../../js/lobibox.js"></script>
+<script type="text/javascript" src="../../js/iniciar-session.js"></script>
+<script type="text/javascript" src="../../js/vista-alumnos.js"></script>
+<script type="text/javascript" src="../../js/back.js"></script>
+</html>

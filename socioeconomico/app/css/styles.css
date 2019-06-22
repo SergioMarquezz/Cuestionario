@@ -1,0 +1,191 @@
+
+h5{
+
+    font-size: 75%;
+    
+}
+
+/* Estilos para las imagnes del pie de pagina*/
+.browsers a img{
+    width: 8%;
+    padding-right: 5px;
+   
+}
+
+.nav-item a{
+
+    color: white;
+    font-size: 100%;
+}
+
+.nav-item{
+    background: darkcyan;
+    margin-left: 22px;
+    margin-top: 8px;
+}
+
+.principal{
+    margin-top: 50px;
+}
+
+/* Truco para agregar un scrollbar a los formularios*/
+/*.scroller{
+    height:385px;
+    overflow-y: scroll;
+}*/
+
+/*Estilos para el titulo de las navs*/
+
+
+/*Estilo para el titulo del jumbotron en el login*/
+/*.jumbotron h4{
+
+    color: #25a95a;
+    font-weight: bold;   
+}*/
+
+/*.principal{ 
+
+    background-color: #2dc9b4bb;
+}
+*/
+
+
+#table-responsive-general, #table-responsive-familiar, #table-responsive-trayectoria, #table-responsive-caracteristicas{
+
+    margin-top: 80px;
+}
+
+
+.activar{
+    background-color:  #186860 !important;
+}
+
+#alumnos{
+    font-size: 25px;
+}
+
+.grey-ic{
+    
+    font-size: 15px;
+}
+
+.justify-content-center img{
+
+
+    margin-top: 30px;
+}
+
+.jumbotron-psicolaga{
+    margin-top: 50px;
+}
+
+
+
+/*Estilo para las card de los formularios*/
+/*.card-part2{
+
+  width: 109%;
+}*/
+
+/*.card-part3{
+
+    width: 100%;
+  }*/
+
+/*.card-general{
+
+    width: 118%;
+}*/
+
+/*.card-acedemicas{
+
+    width: 117%;
+    margin-left: 2%;
+}*/
+
+.footer-copyright{
+
+    height: 110px;
+}
+
+
+
+.form-row input[type="number"]{
+
+    width: 20%;
+}
+
+/*Estilos psicologia modal registro*/
+.icon-key-fill,.icon-lock-fill{
+
+    color: #186860;
+}
+
+.btn-default:hover{
+
+    background-color: #198b80 !important;
+}
+
+
+.label{
+    font-size: 15px;
+}
+
+
+/*#logoUTT{
+  
+    height: 220px;
+    width: 70%;
+    margin-left: 70px;
+}*/
+
+.error{
+
+    border: 1px solid red!important;
+    
+}
+
+.error2{
+
+    color: red!important;
+    
+}
+
+
+
+/*@media screen and (max-width: 1440px) {
+    .titulo {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .titulo {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .titulo {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .titulo {
+        font-size: 15px;
+    }
+
+    #iniciar-sesion{
+
+        width: 115px;
+        float: right;
+    }
+}
+*/
+
+
+
+
+
+
